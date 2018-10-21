@@ -10,6 +10,7 @@ AW_PLAT			:=	plat/allwinner
 
 PLAT_INCLUDES		:=	-Iinclude/plat/arm/common		\
 				-Iinclude/plat/arm/common/aarch64	\
+				-Iplat/arm/css/drivers/mhu		\
 				-I${AW_PLAT}/common/include		\
 				-I${AW_PLAT}/${PLAT}/include
 
@@ -29,6 +30,7 @@ BL31_SOURCES		+=	drivers/arm/gic/common/gic_common.c	\
 				lib/cpus/${ARCH}/cortex_a53.S		\
 				plat/common/plat_gicv2.c		\
 				plat/common/plat_psci_common.c		\
+				${AW_PLAT}/common/drivers/css_mhu.c	\
 				${AW_PLAT}/common/sunxi_bl31_setup.c	\
 				${AW_PLAT}/common/sunxi_cpu_ops.c	\
 				${AW_PLAT}/common/sunxi_pm.c		\

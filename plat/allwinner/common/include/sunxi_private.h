@@ -9,11 +9,6 @@
 
 void sunxi_configure_mmu_el3(int flags);
 
-void sunxi_cpu_on(unsigned int cluster, unsigned int core);
-void sunxi_cpu_off(unsigned int cluster, unsigned int core);
-void sunxi_disable_secondary_cpus(unsigned int primary_cpu);
-void __dead2 sunxi_power_down(void);
-
 int sunxi_pmic_setup(uint16_t socid, const void *fdt);
 void sunxi_security_setup(void);
 

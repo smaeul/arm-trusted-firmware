@@ -25,7 +25,7 @@
 #define RX_MSG_DATA_REG(n)	(0x0184 + 0x8 * (n))
 #define TX_MSG_DATA_REG(n)	(0x0180 + 0x8 * (n))
 
-#define MBOX_CHANNEL		1
+#define MBOX_CHANNEL		0
 #define MBOX_TIMEOUT_ITER	5000 /* 500 ms total */
 #define MBOX_TIMEOUT_UNIT	100  /* 100 μs each  */
 

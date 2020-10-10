@@ -34,9 +34,9 @@ C_SOURCES_PMU		:= src/suspend.c
 
 # Flags definition
 COMMON_FLAGS		:= -g -mcpu=$(ARCH) -mthumb -Wall -O3 -nostdlib -mfloat-abi=soft
-CFLAGS			:= -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-common
+CFLAGS			:= -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-common -fno-pie
 ASFLAGS			:= -Wa,--gdwarf-2
-LDFLAGS			:= -Wl,--gc-sections -Wl,--build-id=none
+LDFLAGS			:= -no-pie -static -Wl,--gc-sections -Wl,--build-id=none
 
 # Cross tool
 CC			:= ${M0_CROSS_COMPILE}gcc

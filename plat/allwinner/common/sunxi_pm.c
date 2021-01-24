@@ -267,6 +267,8 @@ int plat_setup_psci_ops(uintptr_t sec_entrypoint,
 		sunxi_psci_ops.pwr_domain_suspend = sunxi_pwr_domain_off;
 		sunxi_psci_ops.pwr_domain_suspend_finish = sunxi_pwr_domain_on_finish;
 		sunxi_psci_ops.get_sys_suspend_power_state = sunxi_get_sys_suspend_power_state;
+	} else {
+		sunxi_cpu_ops_init();
 	}
 
 	*psci_ops = &sunxi_psci_ops;
